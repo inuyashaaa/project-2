@@ -1,0 +1,10 @@
+users:
+  maximum_name: 100
+  maximum_email: 255
+posts:
+  maximum_content_length: 1000
+  maximum_title_length: 100
+tags:
+  maximum_tag_content: 100
+comments:
+  maximum_comtents_length: 1000
