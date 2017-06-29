@@ -1,10 +1,12 @@
+
 source "https://rubygems.org"
 
-gem "devise"
-gem "jquery-rails"
+gem "bootstrap-sass"
 gem "coffee-rails", "~> 4.2"
 gem "config"
+gem "devise"
 gem "jbuilder", "~> 2.5"
+gem "jquery-rails"
 gem "mysql2", ">= 0.3.18", "< 0.5"
 gem "puma", "~> 3.7"
 gem "rails", "~> 5.1.2"
@@ -25,10 +27,12 @@ group :development, :test do
   gem "guard-rspec", require: false
   gem "jshint"
   gem "railroady"
+  gem "rails-controller-testing"
   gem "rails_best_practices"
   gem "reek"
   gem "rspec"
   gem "rspec-collection_matchers"
+  gem "rspec-html-matchers"
   gem "rspec-rails"
   gem "rubocop", "~> 0.35.0", require: false
   gem "rubocop-checkstyle_formatter", require: false
