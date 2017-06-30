@@ -1,0 +1,58 @@
+<%= provide :title, t(".title") %>
+<%= provide :activec, t(".active") %>
+<%= provide :nav, t(".nav") %>
+
+<div class="contact">
+  <h3 class="tittle"><%= t ".find_us" %> <i class="glyphicon glyphicon-map-marker"></i></h3>
+  <div class="contact-left">
+    <iframe src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJK1iW-rVUNDER3QXxVM0Xlw0&key=AIzaSyBjs7PcgrMVd0dwtUGWjUV5tqZw28Slrz4" allowfullscreen></iframe>
+  </div>
+  <div class="contact-right">
+    <p class="phn"><%= t ".phone" %></p>
+    <p class="phn-bottom"><%= t ".address_first" %><span><%= t ".address_second" %></span></p>
+    <p class="lom"><%= t ".address_content" %></p>
+  </div>
+  <div class="clearfix"></div>
+  <div class="contact-left1">
+    <h3><%= t ".contact_us" %> <span><%= t ".any_question" %></span></h3>
+    <div class="in-left">
+      <form>
+        <p class="your-para"><%= t ".your_name" %> :</p><input onblur="if (this.value == '') {this.value ='';}"
+        onfocus="this.value='';" type="text" value="">
+        <p class="your-para"><%= t ".your_mail" %> :</p><input onblur="if (this.value == '') {this.value ='';}"
+        onfocus="this.value='';" type="text" value="">
+        <p class="your-para"><%= t ".phone_number" %> :</p><input onblur=
+        "if (this.value == '') {this.value ='';}" onfocus="this.value='';" type="text" value="">
+      </form>
+    </div>
+    <div class="in-right">
+      <form>
+        <textarea cols="77" onblur="if (this.value == '') {this.value = '';}" onfocus=
+        "this.value='';" rows="6"></textarea> <input type="submit" value="<%= t ".submit" %>">
+      </form>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <div class="contact-right1">
+    <h3><span><%= t ".blog_name" %></span></h3>
+    <h4><%= t ".descript_first" %> <label><%= t ".descript_second" %></label></h4>
+    <p>
+      <%= t ".ddress_content" %>
+    </p>
+    <ul class=" side-icons con">
+      <li>
+        <%= link_to "", "#", class: "fb" %>
+      </li>
+      <li>
+        <%= link_to "", "#", class: "twitt" %>
+      </li>
+      <li>
+        <%= link_to "", "#", class: "goog" %>
+      </li>
+      <li>
+        <%= link_to "", "#", class: "drib" %>
+      </li>
+    </ul>
+  </div>
+  <div class="clearfix"></div>
+</div>

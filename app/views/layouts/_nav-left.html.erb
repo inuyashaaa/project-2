@@ -1,0 +1,28 @@
+<div class="logo">
+  <%= link_to root_path do %>
+    <h1><%= t ".blog" %></h1>
+  <% end %>
+</div>
+<div class="top-menu">
+  <span class="menu"> </span>
+  <ul class="cl-effect-16">
+    <li><%= link_to t(".home"), root_path, class: "#{yield :activeh}", "data-hover": t(".home") %></li>
+    <li><%= link_to t(".about"), about_path, class: "#{yield :activea}",
+      "data-hover": t(".about") %></li>
+    <li><%= link_to t(".contact"), contact_path, class: "#{yield :activec}",
+      "data-hover": t(".contact") %></li>
+    <li><%= link_to t(".new_story"), "#", class: "#{yield :activen}",
+      "data-hover": t(".new_story") %></li>
+    <li><%= link_to t(".category"), "#", class: "#{yield :activeca}",
+      "data-hover": t(".category") %></li>
+    <li><%= link_to t(".gallery"), "#", class: "#{yield :activeg}",
+      "data-hover": t(".gallery") %></li>
+  </ul>
+
+  <ul class="side-icons">
+    <li><%= link_to "", "#", class: "fb" %></li>
+    <li><%= link_to "", "#", class: "twitt" %></li>
+    <li><%= link_to "", "#", class: "goog" %></li>
+    <li><%= link_to "", "#", class: "drib" %></li>
+  </ul>
+</div>

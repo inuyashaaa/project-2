@@ -1,39 +1,65 @@
-<h2>Sign up</h2>
+<%= provide :nav, t(".register") %>
+<div class="sign-up-form">
+  <h3 class="tittle"><%= t ".registration" %> <i class="glyphicon glyphicon-file"></i>
+  </h3>
+  <p><%= t ".having_hand" %></p>
+  <div class="sign-up">
+    <%= form_for resource, as: resource_name, url: registration_path(resource_name) do |f| %>
+      <%= devise_error_messages! %>
+      <h3 class="tittle reg"><%= t ".persional" %> <i class="glyphicon glyphicon-user"></i>
+      </h3>
+      <div class="sign-u">
+        <div class="sign-up1">
+          <h4 class="a"><%= t ".name" %>* :</h4>
+        </div>
+        <div class="sign-up2">
+          <%= f.text_field :name, class: "text" %>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+      <div class="sign-u">
+        <div class="sign-up1">
+          <h4 class="b"><%= t ".phone" %>* :</h4>
+        </div>
+        <div class="sign-up2">
+          <%= f.text_field :phone, class: "text" %>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+      <div class="sign-u">
+        <div class="sign-up1">
+          <h4 class="c"><%= t ".email" %>* :</h4>
+        </div>
+        <div class="sign-up2">
+          <%= f.text_field :email, class: "text" %>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+
+      <h3 class="tittle reg"><%= t ".login_info" %> <i class="glyphicon glyphicon-off"></i></h3>
+      <div class="sign-u">
+        <div class="sign-up1">
+          <h4 class="d"><%= t ".password" %>* :</h4>
+        </div>
+        <div class="sign-up2">
+          <%= f.password_field :password, class: "text" %>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+
+      <div class="sign-u">
+        <div class="sign-up1">
+          <h4><%= t ".confirm_password" %>* :</h4>
+        </div>
+        <div class="sign-up2">
+          <%= f.password_field :password_confirmation, class: "text" %>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+
+      <input type="submit" value="<%= t ".sign_up" %>">
+    <% end %>
   </div>
-
-  <div class="field">
-    <%= f.label :phone %><br />
-    <%= f.text_field :phone %>
-  </div>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
