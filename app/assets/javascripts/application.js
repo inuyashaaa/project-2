@@ -43,6 +43,6 @@ $(document).on('turbolinks:load', function(){
       });
     });
 
-    $().UItoTop({easingType:'easeOutQuart'});
+    $().UItoTop({easingType: 'easeOutQuart'});
   });
 });
