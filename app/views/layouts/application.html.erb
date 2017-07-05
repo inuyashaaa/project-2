@@ -1,14 +1,31 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
   <head>
-    <title>Project2</title>
+    <title><%= full_title yield :title %></title>
     <%= csrf_meta_tags %>
 
+    <%= stylesheet_link_tag "application", "//fonts.googleapis.com/css?family=Open+Sans:700,700italic,800,300,300italic,400italic,400,600,600italic", "data-turbolinks-track": "reload" %>
     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
   </head>
-
   <body>
-    <%= yield %>
+    <%= render "layouts/header" %>
+
+    <div class="full">
+      <div class="col-md-3 top-nav <%= yield :nav %>">
+        <%= render "layouts/nav-left" %>
+      </div>
+
+      <div class="col-md-9 main">
+        <%= yield %>
+        <div class="clearfix"> </div>
+        <%= render "layouts/footer" %>
+      </div>
+
+      <div class="clearfix"> </div>
+    </div>
+    <%= link_to "#home" do %>
+      <span id="toTopHover" style="opacity: 1;"> </span>
+    <% end %>
   </body>
 </html>

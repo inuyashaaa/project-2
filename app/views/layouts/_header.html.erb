@@ -1,0 +1,28 @@
+<div class="h-top" id="home">
+  <div class="top-header">
+    <ul class="cl-effect-16 top-nag">
+      <% if user_signed_in? %>
+        <li><%= link_to t(".log_out"), destroy_user_session_path,
+          method: :delete, "data-hover": t(".log_out") %></li>
+      <% else %>
+        <li><%= link_to t(".registration"), new_user_registration_path,
+          "data-hover": t(".registration") %></li>
+        <li><%= link_to t(".log_in"), new_user_session_path,
+          "data-hover": t(".log_in") %></li>
+      <% end %>
+      <li><%= link_to t(".about"), about_path,
+        "data-hover": t(".about") %></li>
+      <li><%= link_to t(".contact"), contact_path,
+        "data-hover": t(".contact") %></li>
+    </ul>
+    <div class="search-box">
+      <div class="b-search">
+        <form>
+          <input type="text" value="<%= t ".search" %>" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '<%= t ".search" %>';}">
+          <input type="submit" value="">
+        </form>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</div>

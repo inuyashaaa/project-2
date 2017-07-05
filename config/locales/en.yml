@@ -1,33 +1,110 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  devise:
+    registrations:
+      new:
+        register: "register"
+        registration: "Registration"
+        having_hand: "Having hands on experience in creating innovative designs,
+          I do offer design solutions which harness"
+        persional: "Personal Information"
+        name: "Name"
+        phone: "Phone Number"
+        email: "Email Address"
+        login_info: "Login Information"
+        password: "Password"
+        confirm_password: "Confirm Password"
+        sign_up: "Sign up"
+    sessions:
+      new:
+        login: "login"
+        login_title: "Login"
+        welcome: "Welcome, please enter the following to continue."
+        if_you: "If you have previously Login with us,"
+        click_here: "click here"
+        user_name: "User Name"
+        password: "Password"
+        new_registration: "New Registration"
+        login_content: "By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more."
+        create_account: "Create An Account"
+  layouts:
+    application:
+      base_title: "Illuminati"
+    header:
+      log_out: "Logout"
+      registration: "Registration"
+      log_in: "Login"
+      about: "About"
+      contact: "Contact"
+      search: "Search"
+    footer:
+      blog: "Illuminati Blog"
+      author: "Design and custom by Illuminati"
+      message_us: "Message Us Now"
+      available: "Best wish for you"
+      mail: "Huymanhtmhp@gmail.com"
+      address_location: "Address Location"
+      my_address: "46-66-Ho Tung Mau, Mai Dich, Cau Giay, Ha Noi"
+      phone: "phone: 01677661273"
+      copy_right: "2017 Illuminati Blog. All Rights Reserved"
+    nav-left:
+      blog: "Blog"
+      home: "Home"
+      about: "About"
+      contact: "Contact"
+      new_story: "New Story"
+      category: "Category"
+      gallery: "Gallery"
+  home:
+    index:
+      title: "Home"
+      general: "General"
+      what: "What turn out consetetur sadipscing elit"
+      post_date: "On Aug 25"
+      sum_comment: "64"
+      sum_view: "96"
+      post_title: "Consetetur sadipscing elit"
+      post_content: "Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+        labore dolore magna aliquyam eratsed diam justo duo dolores rebum."
+      news: "News"
+      media: "Media"
+      new_ipad: "New iPad App to simulate your Guitar"
+      post_date_two: "Feb 22, 2015"
+    about:
+      about: "About"
+      nav: "about"
+      active: "active"
+      having_hand: "Having hands on experience in creating innovative designs,
+        I do offer design solutions which harness the new possibilities of web based communication."
+      label: "I do specialize in all aspects of website designing,
+        Nam libero tempore,aspects of website designing cum soluta nobis est eligendi theme development,
+        possimus omnis dolor repellendus.Nam libero tempore, cum soluta nobis est eligendi voluptatum..."
+      nam: "Nam libero tempore, cum soluta nobis est eligendi
+        optio cumque nihil impedit quo minus id quod maxime placeat facere
+        possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+        Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus
+        saepe eveniet ut et voluptates repudiandae sint Consetetur sadipscing elitr,
+        sed diam nonumy eirmod tempor invidunt labore dolore magna  et molestiae non recusandae."
+    contact:
+      title: "Contact"
+      active: "active"
+      nav: "contact"
+      find_us: "Find Us"
+      phone: "01677661273"
+      address_first: "46-66-Ho Tung Mau"
+      address_second: "Mai Dich - Cau Giay - Ha Noi"
+      address_content: "Nullam ac urna velit. Pellentesque in arcu tortor.
+        Pellentesque nec est et elit varius pulvinar eget vitae sapien.
+        Aenean vehicula accumsan gravida."
+      contact_us: "Contact Us With"
+      any_question: "Any questions"
+      your_name: "Your Name"
+      your_mail: "Your Mail"
+      phone_number: "Phone Number"
+      submit: "Submit"
+      blog_name: Illuminati Blog
+      descript_first: "Nullam ac urna velit pellentesque in"
+      descript_second: "arcu tortor Pellentesque nec"
+      descript_content: "Nullam ac urna velit. Pellentesque in arcu tortor.
+        Pellentesque nec est et elit varius pulvinar eget vitae sapien.
+        Aenean vehicula accumsan gravida. Cum sociis natoque penatibus et magnis dis parturient montes,
+        nascetur ridiculus mus. Phasellus et lectus in urna consequat consectetur ut eget risus."
