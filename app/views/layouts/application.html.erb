@@ -3,12 +3,12 @@
   <head>
     <title><%= full_title yield :title %></title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag "application", "//fonts.googleapis.com/css?family=Open+Sans:700,700italic,800,300,300italic,400italic,400,600,600italic", "data-turbolinks-track": "reload" %>
     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
   </head>
   <body>
+    <%= render "shared/toastr_message" %>
     <%= render "layouts/header" %>
 
     <div class="full">

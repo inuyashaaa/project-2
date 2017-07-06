@@ -1,6 +1,7 @@
 //= require rails-ujs
 //= require turbolinks
 //= require jquery
+//= require toastr
 //= require bootstrap-sprockets
 //= require_tree .
 //= require easing
