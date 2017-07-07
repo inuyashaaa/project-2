@@ -36,6 +36,8 @@ en:
       about: "About"
       contact: "Contact"
       search: "Search"
+      users: "Users"
+      change_profile: "Profile"
     footer:
       blog: "Illuminati Blog"
       author: "Design and custom by Illuminati"
@@ -108,3 +110,17 @@ en:
         Pellentesque nec est et elit varius pulvinar eget vitae sapien.
         Aenean vehicula accumsan gravida. Cum sociis natoque penatibus et magnis dis parturient montes,
         nascetur ridiculus mus. Phasellus et lectus in urna consequat consectetur ut eget risus."
+  users:
+    index:
+      title: "List Users"
+      active: "active"
+      user: "User"
+      email: "Email"
+      phone: "Phone"
+      action: "Action"
+      delete: "Delete"
+    destroy:
+      deleted: "User deleted"
+      error: "Can't delete the user! Somting went wrong!!!"
+    user:
+      sure: "Are you sure?"

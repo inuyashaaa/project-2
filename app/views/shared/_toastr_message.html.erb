@@ -1,0 +1,6 @@
+<% flash.each do |message_type, message| %>
+  <% if message_type = "notice" %>
+    <% message_type = "success" %>
+  <% end %>
+  <%= content_tag :div, message, class: "#{message_type}", id: "message-tag" %>
+<% end %>

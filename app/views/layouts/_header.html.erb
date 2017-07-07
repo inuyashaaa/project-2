@@ -3,7 +3,13 @@
     <ul class="cl-effect-16 top-nag">
       <% if user_signed_in? %>
         <li><%= link_to t(".log_out"), destroy_user_session_path,
-          method: :delete, "data-hover": t(".log_out") %></li>
+          method: :delete, data: {hover: t(".log_out")} %></li>
+        <li>
+          <%= link_to t(".users"), users_path, "data-hover": t(".users") %>
+        </li>
+        <li>
+          <%= link_to t(".change_profile"), edit_user_registration_path, "data-hover": t(".change_profile") %>
+        </li>
       <% else %>
         <li><%= link_to t(".registration"), new_user_registration_path,
           "data-hover": t(".registration") %></li>

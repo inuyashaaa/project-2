@@ -1,0 +1,13 @@
+<tr>
+  <td>
+    <%= link_to user.name, user %>
+  </td>
+  <td><%= user.email %></td>
+  <td><%= user.phone %></td>
+  <td>
+    <% if can? :destroy, user %>
+      <%= link_to t(".delete"), user, method: :delete,
+        data: {confirm: t(".sure")}, class: "btn btn-danger" %>
+    <% end %>
+  </td>
+</tr>

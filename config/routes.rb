@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get "/contact", to: "home#contact"
 
   devise_for :users
+  resources :users, only: [:index, :destroy]
 end

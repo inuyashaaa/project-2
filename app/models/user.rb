@@ -11,4 +11,6 @@ class User < ApplicationRecord
   has_many :followers, through: :passive_relationships, source: :follower
 
   validates :name, presence: true, length: {maximum: Settings.users.maximum_name.to_i}
+
+  scope :order_by_id, ->{order :id}
 end
