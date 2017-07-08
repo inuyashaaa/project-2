@@ -12,4 +12,20 @@ class User < ApplicationRecord
 
   scope :order_by_id, ->{order :id}
   validates :name, presence: true, length: {maximum: Settings.users.maximum_name}
+
+  def load_feed
+    Post.load_feed(following_ids, id).created_at_desc
+  end
+
+  def follow other_user
+    following << other_user
+  end
+
+  def unfollow other_user
+    following.delete other_user
+  end
+
+  def following? other_user
+    following.include? other_user
+  end
 end
