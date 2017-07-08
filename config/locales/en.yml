@@ -151,3 +151,8 @@ en:
     error_messages:
       error: "error"
       error_count: " prohibited this post from being saved:"
+  comments:
+    comment:
+      reply: "Reply"
+    comment_form:
+      comment: "Comment"
