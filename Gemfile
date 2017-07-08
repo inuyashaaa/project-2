@@ -3,13 +3,17 @@ source "https://rubygems.org"
 
 gem "bootstrap-sass"
 gem "cancancan"
+gem "carrierwave"
+gem "ckeditor"
 gem "coffee-rails", "~> 4.2"
 gem "config"
 gem "devise"
 gem "faker"
+gem "fog"
 gem "jbuilder", "~> 2.5"
 gem "jquery-rails"
 gem "kaminari"
+gem "mini_magick"
 gem "mysql2", ">= 0.3.18", "< 0.5"
 gem "puma", "~> 3.7"
 gem "rails", "~> 5.1.2"
@@ -20,7 +24,6 @@ gem "uglifier", ">= 1.3.0"
 
 group :development, :test do
   gem "autoprefixer-rails"
-  gem "better_errors"
   gem "brakeman", require: false
   gem "bundler-audit"
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

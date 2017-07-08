@@ -12,18 +12,14 @@
     <%= render "layouts/header" %>
 
     <div class="full">
-      <div class="col-md-3 top-nav <%= yield :nav %>">
-        <%= render "layouts/nav-left" %>
-      </div>
-
-      <div class="col-md-9 main">
+      <div class="col-md-10 col-md-offset-1 main">
         <%= yield %>
         <div class="clearfix"> </div>
-        <%= render "layouts/footer" %>
       </div>
-
       <div class="clearfix"> </div>
     </div>
+        <%= render "layouts/footer" %>
+
     <%= link_to "#home" do %>
       <span id="toTopHover" style="opacity: 1;"> </span>
     <% end %>

@@ -1,25 +1,32 @@
 <div class="h-top" id="home">
   <div class="top-header">
     <ul class="cl-effect-16 top-nag">
+      <li><%= link_to t(".home"), root_path, data: {hover: t(".home")} %></li>
       <% if user_signed_in? %>
         <li><%= link_to t(".log_out"), destroy_user_session_path,
           method: :delete, data: {hover: t(".log_out")} %></li>
         <li>
-          <%= link_to t(".users"), users_path, "data-hover": t(".users") %>
+          <%= link_to t(".users"), users_path, data: {hover: t(".users")} %>
         </li>
         <li>
-          <%= link_to t(".change_profile"), edit_user_registration_path, "data-hover": t(".change_profile") %>
+          <%= link_to t(".change_profile"), edit_user_registration_path, data: {hover: t(".change_profile")} %>
+        </li>
+        <li>
+          <%= link_to t(".new_story"), new_post_path, data: {hover: t(".new_story")} %>
+        </li>
+        <li>
+          <%= link_to t(".my_post"), posts_path, data: {hover: t(".my_post")} %>
         </li>
       <% else %>
         <li><%= link_to t(".registration"), new_user_registration_path,
-          "data-hover": t(".registration") %></li>
+          data: {hover: t(".registration")} %></li>
         <li><%= link_to t(".log_in"), new_user_session_path,
-          "data-hover": t(".log_in") %></li>
+          data: {hover: t(".log_in")} %></li>
       <% end %>
       <li><%= link_to t(".about"), about_path,
-        "data-hover": t(".about") %></li>
+        data: {hover: t(".about")} %></li>
       <li><%= link_to t(".contact"), contact_path,
-        "data-hover": t(".contact") %></li>
+        data: {hover: t(".contact")} %></li>
     </ul>
     <div class="search-box">
       <div class="b-search">
