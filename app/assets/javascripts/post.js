@@ -48,4 +48,24 @@ $(document).ready(function() {
     });
     return false;
   });
-})
+
+  $('body').on('click', '.delete-post', function(event) {
+    event.preventDefault();
+    var del = $(this);
+    $.ajax({
+      url: del.attr('href'),
+      beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+      type: 'delete',
+      dataType: 'json',
+      data: {},
+    })
+    .done(function(response) {
+      toastr.success('Post deleted <3');
+      del.closest('.card').fadeOut('slow');
+    })
+    .fail(function() {
+      console.log("error");
+    });
+    return false;
+  });
+});

@@ -20,8 +20,7 @@
         <% if can? :update, post %>
           <span class="pull-right">
             <%= link_to t(".edit"), edit_post_path(post), class: "btn btn-info btn-sm edit-post" %>
-            <%= link_to t(".delete"), post, method: :delete,
-              class: "btn btn-danger btn-sm", data: {confirm: t(".confirm")} %>
+            <%= link_to t(".delete"), post, method: :delete, class: "btn btn-danger btn-sm delete-post" %>
           </span>
         <% end %>
       </div>
