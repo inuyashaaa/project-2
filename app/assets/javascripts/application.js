@@ -1,8 +1,8 @@
 //= require rails-ujs
-//= require turbolinks
 //= require jquery
 //= require toastr
 //= require bootstrap-sprockets
+//= require ckeditor/init
 //= require_tree .
 //= require easing
 //= require easyResponsiveTabs
@@ -14,7 +14,7 @@
 //= require owl.carousel
 //= require responsiveslides.min
 
-$(document).on('turbolinks:load', function(){
+$(document).ready(function(){
   addEventListener('load', function(){setTimeout(hideURLbar, 0);}, false);
   function hideURLbar(){window.scrollTo(0,1);}
 
@@ -42,6 +42,11 @@ $(document).on('turbolinks:load', function(){
           $('.events').append('<li>after event fired.</li>');
         }
       });
+    });
+
+    $('.scroll').click(function(event){
+      event.preventDefault();
+      $('html,body').animate({scrollTop: $(this.hash).offset().top}, 900);
     });
 
     $().UItoTop({easingType: 'easeOutQuart'});

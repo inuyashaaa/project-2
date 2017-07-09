@@ -38,6 +38,9 @@ en:
       search: "Search"
       users: "Users"
       change_profile: "Profile"
+      new_story: "New Story"
+      my_post: "My Story"
+      home: "Home"
     footer:
       blog: "Illuminati Blog"
       author: "Design and custom by Illuminati"
@@ -124,3 +127,14 @@ en:
       error: "Can't delete the user! Somting went wrong!!!"
     user:
       sure: "Are you sure?"
+  posts:
+    post:
+      delete: "Delete"
+      confirm: "Are you sure?"
+    form:
+      error_count: " prohibited this post from being saved:"
+    new:
+      new_story: "Write new Story"
+    edit_form:
+      edit_post: "Edit post"
+    error: "Opps!!!Sorry...somthing went wrong"

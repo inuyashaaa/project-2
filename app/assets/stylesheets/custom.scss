@@ -1,7 +1,101 @@
-.about-content {
-  padding: 3em;
+@import 'color';
+
+.actions {
+  margin: 10px 0;
 }
 
-.list-user {
-  padding: 3em;
+.new-post-title {
+  margin: 15px 0;
+}
+
+.show-post {
+  box-shadow: 1px 1px 1px 1px $gray-color;
+  float: left;
+  margin-top: 2px;
+  padding: 32px 16px 24px;
+  width: 100%;
+}
+
+.cover-image {
+  background-position: 20%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $white-color;
+  height: 300px;
+  position: relative;
+  text-align: center;
+}
+
+.post-title {
+  font-family: "Times New Roman", Georgia, serif;
+  padding-top: 100px;
+  word-break: break-word;
+}
+
+.black-bg {
+  background: $rbga-four;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.card {
+  box-shadow: 0 2px 5px 0 $rbga-sixteen, 0 2px 10px 0 $rbga-tween;
+  background-clip: padding-box;
+  border-radius: 2px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+  // scss-lint:disable QualifyingElement
+  span.card-title {
+    color: $white-color;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  .card-image {
+    overflow: hidden;
+    position: relative;
+
+    img {
+      background-clip: padding-box;
+      border-radius: 2px 2px 0 0;
+      position: relative;
+      width: 100%;
+    }
+
+    span.card-title {
+      bottom: 0;
+      left: 0;
+      padding: 16px;
+      position: absolute;
+    }
+  }
+
+  .card-content {
+    background-clip: padding-box;
+    border-radius: 0 0 2px 2px;
+    box-sizing: border-box;
+    padding: 16px;
+
+    p {
+      color: inherit;
+      font-size: 20px;
+      margin: 0;
+      word-break: break-word;
+    }
+
+    span.card-title {
+      line-height: 48px;
+    }
+  }
+
+  .card-action {
+    border-top: 1px solid $rbga-nothing;
+    padding: 16px;
+  }
 }
