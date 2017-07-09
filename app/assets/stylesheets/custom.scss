@@ -41,6 +41,7 @@
   z-index: 1;
 }
 
+// scss-lint:disable PropertySortOrder
 .card {
   box-shadow: 0 2px 5px 0 $rbga-sixteen, 0 2px 10px 0 $rbga-tween;
   background-clip: padding-box;

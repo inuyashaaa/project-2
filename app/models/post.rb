@@ -10,6 +10,7 @@ class Post < ApplicationRecord
   validates :content, presence: true
 
   scope :created_at_desc, ->{order created_at: :desc}
+  scope :select_post, ->{select :id, :title, :content, :picture, :created_at, :user_id}
 
   mount_uploader :picture, PictureUploader
 end

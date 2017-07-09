@@ -1,0 +1,29 @@
+<div class="show-post">
+  <h3 class="tittle"><%= t ".your_story" %> <i class="glyphicon glyphicon-heart"></i></h3>
+  <div class="single">
+    <div class="cover-image" id="cover-title-image">
+      <input type="hidden" id="images-url" value="<%= @post.picture.url %>">
+      <div class="black-bg">
+        <h2 class="top post-title"><%= @post.title %></h2>
+      </div>
+    </div>
+    <div class="b-bottom">
+      <p class="sub"><%= raw @post.content %></p>
+      <p>
+        <strong>
+          <%= @post.created_at.strftime Settings.posts.timestr %>
+          <span class="glyphicon glyphicon-comment"></span>0
+        </strong>
+      </p>
+    </div>
+  </div>
+  <div class="single-bottom">
+    <div class="single-middle">
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <div class="coment-form">
+    <h4><%= t ".comment" %></h4>
+  </div>
+  <div class="clearfix"></div>
+</div>

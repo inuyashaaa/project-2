@@ -7,9 +7,9 @@ RSpec.describe Tag, type: :model do
   end
 
   describe "validations" do
-    it {expect validate_presence_of :content}
+    it {expect validate_presence_of :name}
     it do
-      expect validate_length_of(:content)
+      expect validate_length_of(:name)
         .is_at_most Settings.tags.maximum_tag_content
     end
   end
