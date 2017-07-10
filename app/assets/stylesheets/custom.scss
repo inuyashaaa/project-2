@@ -100,3 +100,23 @@
     padding: 16px;
   }
 }
+
+.media-object {
+  height: 80px;
+}
+
+.media-left.response-text-left {
+  width: 15%;
+}
+
+.media-body.response-text-right {
+  width: 85%;
+}
+
+.comment-row {
+  border-bottom: 1px solid $rbga-nothing;
+}
+
+.comment-user {
+  padding-left: 3px;
+}

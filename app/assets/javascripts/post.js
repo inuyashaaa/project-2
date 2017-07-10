@@ -54,7 +54,8 @@ $(document).ready(function() {
     var del = $(this);
     $.ajax({
       url: del.attr('href'),
-      beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+      beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token',
+        $('meta[name="csrf-token"]').attr('content'))},
       type: 'delete',
       dataType: 'json',
       data: {},

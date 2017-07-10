@@ -1,0 +1,13 @@
+<div class="media response-info comment-row">
+  <div class="media-left response-text-left">
+    <%= image_tag "default-avatar.jpg", class: "img-responsive media-object" %>
+    <h5 class="comment-user"><a href="#"><%= comment.user.name %></a></h5>
+  </div>
+  <div class="media-body response-text-right">
+    <p><%= comment.content %></p>
+    <ul>
+      <li><%= comment.created_at.strftime Settings.posts.timestr %></li>
+      <li><%= link_to t(".reply"), "#" %></li>
+    </ul>
+  </div>
+</div>

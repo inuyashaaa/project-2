@@ -12,7 +12,7 @@
       <p>
         <strong>
           <%= @post.created_at.strftime Settings.posts.timestr %>
-          <span class="glyphicon glyphicon-comment"></span>0
+          <span class="glyphicon glyphicon-comment"></span><strong id="total-comment"><%= @post.comments.size %></strong>
         </strong>
       </p>
     </div>
@@ -22,8 +22,9 @@
       <div class="clearfix"></div>
     </div>
   </div>
-  <div class="coment-form">
-    <h4><%= t ".comment" %></h4>
+
+  <div class="list-post">
+    <%= render partial: "comments/comment", collection: @post.comments, as: "comment" %>
   </div>
-  <div class="clearfix"></div>
+  <%= render "comments/comment_form", post: @post %>
 </div>

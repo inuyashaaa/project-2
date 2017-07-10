@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   get "/contact", to: "home#contact"
 
   resources :users, only: [:index, :destroy]
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
 end
