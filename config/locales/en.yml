@@ -130,11 +130,24 @@ en:
   posts:
     post:
       delete: "Delete"
+      edit: "Edit Post"
       confirm: "Are you sure?"
     form:
-      error_count: " prohibited this post from being saved:"
+      error: "error"
+      create: "Create"
     new:
       new_story: "Write new Story"
     edit_form:
       edit_post: "Edit post"
     error: "Opps!!!Sorry...somthing went wrong"
+    show:
+      delete: "Delete"
+      edit: "Edit Post"
+      share: "SHARE"
+      comment: "Comment"
+      your_comment: "Your Comment..."
+      your_story: "Your Story"
+  shared:
+    error_messages:
+      error: "error"
+      error_count: " prohibited this post from being saved:"

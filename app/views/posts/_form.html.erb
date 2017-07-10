@@ -1,0 +1,20 @@
+<%= form_for post, class: "new-post" do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+  <span class="picture">
+    <%= f.file_field :picture, accept: "image/jpeg,image/gif,image/png", class: "form-control" %>
+  </span>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :content %>
+    <%= f.cktext_area :content %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit t(".create"), class: "btn btn-info btn-block" %>
+  </div>
+<% end %>

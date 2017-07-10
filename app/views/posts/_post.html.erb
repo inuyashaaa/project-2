@@ -1,0 +1,30 @@
+<div class="row" id="<%= post.id %>">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="card">
+      <div class="card-image">
+        <%= image_tag post.picture, class: "img-responsive" %>
+      </div>
+      <div class="card-content">
+        <p>
+          <%= link_to post.title, post %>
+        </p>
+      </div>
+      <div class="card-action">
+        <%= t ".post_date" %> <%= post.created_at.strftime Settings.posts.timestr %>
+        <%= link_to post, class: "span-link" do %>
+          <span class="glyphicon glyphicon-comment"></span>
+        <% end %>
+        <%= link_to post, class: "span-link" do %>
+          <span class="glyphicon glyphicon-circle-arrow-right"></span>
+        <% end %>
+        <% if can? :update, post %>
+          <span class="pull-right">
+            <%= link_to t(".edit"), edit_post_path(post), class: "btn btn-info btn-sm edit-post" %>
+            <%= link_to t(".delete"), post, method: :delete,
+              class: "btn btn-danger btn-sm", data: {confirm: t(".confirm")} %>
+          </span>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
