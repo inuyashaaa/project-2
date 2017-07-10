@@ -45,11 +45,9 @@ class PostsController < ApplicationController
 
   def destroy
     if @post.destroy
-      flash[:success] = t ".deleted"
-      redirect_to root_path
+      render json: {status: :success, post: @post.id}
     else
-      flash[:error] = t ".error"
-      redirect_to @post
+      render json: {status: :error}
     end
   end
 

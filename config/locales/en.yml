@@ -130,8 +130,8 @@ en:
   posts:
     post:
       delete: "Delete"
-      edit: "Edit Post"
       confirm: "Are you sure?"
+      edit_post: "Edit Post"
     form:
       error: "error"
       create: "Create"
