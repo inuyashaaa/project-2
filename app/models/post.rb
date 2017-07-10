@@ -11,6 +11,9 @@ class Post < ApplicationRecord
 
   scope :created_at_desc, ->{order created_at: :desc}
   scope :select_post, ->{select :id, :title, :content, :picture, :created_at, :user_id}
+  scope :load_feed, ->(following_ids, id) do
+    where "user_id IN (?) OR user_id = ?", following_ids, id
+  end
 
   mount_uploader :picture, PictureUploader
 end

@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :load_post, except: [:index, :new, :create]
 
   def index
-    @posts = current_user.posts.select_post.created_at_desc.page(params[:page]).per Settings.posts.per_page
+    @posts = current_user.load_feed.select_post.created_at_desc.page(params[:page]).per Settings.posts.per_page
   end
 
   def new
