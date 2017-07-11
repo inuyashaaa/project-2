@@ -9,21 +9,32 @@
     </div>
     <div class="b-bottom">
       <p class="sub"><%= raw @post.content %></p>
-      <p>
+      <div class="tags">
+        <strong>Tags:</strong>
+        <% @post.tags.each do |tag| %>
+          <span><%= link_to tag.name, tag %></span>
+        <% end %>
+      </div>
+      <div>
+        <%= t ".post_date" %> <%= @post.created_at.strftime Settings.posts.timestr %>
+        <%= t ".by" %><strong> <%= link_to @post.user.name, @post.user %></strong>
         <strong>
-          <%= @post.created_at.strftime Settings.posts.timestr %>
           <span class="glyphicon glyphicon-comment"></span><strong id="total-comment"><%= @post.comments.size %></strong>
         </strong>
-      </p>
+      </div>
     </div>
   </div>
   <div class="single-bottom">
     <div class="single-middle">
+      <ul class="social-share">
+        <li><span>SHARE</span></li>
+        <li>
+          <%= social_share_button_tag(@post.title, :allow_sites => %w(twitter)) %>
+        </li>
       <div class="clearfix"></div>
     </div>
   </div>
-
-  <div class="list-post">
+  <div class="list-comment">
     <%= render partial: "comments/comment", collection: @post.comments, as: "comment" %>
   </div>
   <%= render "comments/comment_form", post: @post %>

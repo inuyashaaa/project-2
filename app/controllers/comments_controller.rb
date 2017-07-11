@@ -17,7 +17,7 @@ class CommentsController < ApplicationController
     @comment.destroy
     respond_to do |format|
       format.html do
-        redirect_to :back
+        redirect_to @post
       end
       format.js
     end

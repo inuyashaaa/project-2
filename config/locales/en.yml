@@ -127,11 +127,17 @@ en:
       error: "Can't delete the user! Somting went wrong!!!"
     user:
       sure: "Are you sure?"
+    follow:
+      follow: "Follow"
+    unfollow:
+      unfollow: "Unfollow"
   posts:
     post:
       delete: "Delete"
       confirm: "Are you sure?"
       edit_post: "Edit Post"
+      post_date: "Posted on"
+      by: "by"
     form:
       error: "error"
       create: "Create"
@@ -147,6 +153,10 @@ en:
       comment: "Comment"
       your_comment: "Your Comment..."
       your_story: "Your Story"
+      by: "by"
+      post_date: "Posted on"
+    create:
+      created: "Post created!"
   shared:
     error_messages:
       error: "error"

@@ -16,6 +16,9 @@
       </tbody>
     </table>
   </div>
-
+  <p>
+    Download:
+    <%= link_to "Excel_By_Xml", xml_index_path(format: "xls") %>
+  </p>
   <%= paginate @users %>
 </div>

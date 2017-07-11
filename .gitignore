@@ -14,14 +14,7 @@
 
 # Ignore reports
 /.framgia-ci-reports/*
-/config/database.yml
-/config/secrets.yml
-
-#Ignore vendor
-/vendor/*
 
 config/settings.local.yml
 config/settings/*.local.yml
 config/environments/*.local.yml
-
-/public/uploads/*

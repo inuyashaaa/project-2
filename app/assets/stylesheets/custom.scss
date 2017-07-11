@@ -21,14 +21,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: $white-color;
-  height: 300px;
+  height: 150px;
   position: relative;
   text-align: center;
 }
 
 .post-title {
   font-family: "Times New Roman", Georgia, serif;
-  padding-top: 100px;
+  padding-top: 50px;
   word-break: break-word;
 }
 
@@ -61,6 +61,7 @@
   .card-image {
     overflow: hidden;
     position: relative;
+    height: 250px;
 
     img {
       background-clip: padding-box;
@@ -119,4 +120,35 @@
 
 .comment-user {
   padding-left: 3px;
+}
+
+.stats {
+  margin-top: 0;
+  overflow: auto;
+  padding: 0;
+
+  a {
+    border-left: 1px solid $gray-color;
+    color: gray;
+    float: left;
+    padding: 0 10px;
+
+    &:first-child {
+      border: 0;
+      padding-left: 0;
+    }
+
+    &:hover {
+      color: $main-blue;
+      text-decoration: none;
+    }
+  }
+
+  strong {
+    display: block;
+  }
+}
+
+.show-user {
+  margin-top: 20px;
 }

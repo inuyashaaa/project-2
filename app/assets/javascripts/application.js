@@ -3,6 +3,8 @@
 //= require toastr
 //= require bootstrap-sprockets
 //= require ckeditor/init
+//= require typeahead.bundle
+//= require social-share-button
 //= require_tree .
 //= require easing
 //= require easyResponsiveTabs
@@ -17,6 +19,19 @@
 $(document).ready(function(){
   addEventListener('load', function(){setTimeout(hideURLbar, 0);}, false);
   function hideURLbar(){window.scrollTo(0,1);}
+
+  var posts = new Bloodhound({
+    datumTokenizer: Bloodhound.tokenizers.whitespace,
+    queryTokenizer: Bloodhound.tokenizers.whitespace,
+    remote: {
+      url: '/posts/autocomplete?query=%QUERY',
+      wildcard: '%QUERY'
+    }
+  });
+  console.log(posts);
+  $('#search').typeahead(null, {
+    source: posts
+  });
 
   $(document).ready(function($){
     $('.scroll').click(function(event){

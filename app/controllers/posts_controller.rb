@@ -3,7 +3,12 @@ class PostsController < ApplicationController
   before_action :load_post, except: [:index, :new, :create]
 
   def index
-    @posts = current_user.posts.select_post.created_at_desc.page(params[:page]).per Settings.posts.per_page
+    if params[:search].present?
+      @posts = Post.search(params[:search])
+    else
+      list_post = current_user.load_feed.select(:id, :title, :content, :picture, :created_at, :user_id).created_at_desc
+      @posts = list_post.page(params[:page]).per Settings.posts.per_page
+    end
   end
 
   def new
@@ -51,10 +56,20 @@ class PostsController < ApplicationController
     end
   end
 
+  def autocomplete
+    render json: Post.search(params[:query], {
+      fields: ["title"],
+      match: :word_start,
+      limit: 10,
+      load: false,
+      misspellings: {below: 5}
+    }).map(&:title)
+  end
+
   private
 
   def post_params
-    params.require(:post).permit :title, :content, :picture
+    params.require(:post).permit :title, :content, :picture, :all_tags
   end
 
   def load_post

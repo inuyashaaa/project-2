@@ -1,0 +1,33 @@
+<div class="row" id="<%= post.id %>">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="card">
+      <div class="card-image">
+        <%= image_tag (post.picture? ? post.picture.url : 'default-post.png'), class: "img-responsive" %>
+      </div>
+      <div class="card-content">
+        <p>
+          <%= link_to post.title, post %>
+        </p>
+        <% if post.tags.any? %>
+          <div class="tags"><strong>Tags:</strong>
+            <% post.tags.each do |tag| %>
+              <span><%= link_to tag.name, tag %></span>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="card-action">
+        <%= t ".post_date" %> <%= post.created_at.strftime Settings.posts.timestr %>
+        <%= t ".by" %><strong> <%= link_to post.user.name, post.user %></strong>
+        <%= link_to post, class: "span-link" do %>
+          <span class="glyphicon glyphicon-comment"></span>
+          <strong id="total-comment"><%= post.comments.size %></strong>
+        <% end %>
+        <td>
+          <%= link_to "Delete", admin_post_path(post), remote: true, method: :delete, data: {confirm: "You sure?"}, class: "btn btn-danger" %>
+        </td>
+      </div>
+    </div>
+  </div>
+</div>

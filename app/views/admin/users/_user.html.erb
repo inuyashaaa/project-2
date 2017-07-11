@@ -1,0 +1,10 @@
+<tr id="<%= user.id %>">
+  <td>
+    <%= link_to user.name, user %>
+  </td>
+  <td><%= user.email %></td>
+  <td><%= user.phone %></td>
+  <td>
+    <%= link_to "Delete", admin_user_path(user), remote: true, method: :delete, data: {confirm: "You sure?"}, class: "btn btn-danger" %>
+  </td>
+</tr>

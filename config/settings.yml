@@ -7,6 +7,11 @@ posts:
   maximum_title_length: 1000
   per_page: 10
   timestr: "%B %d, %Y"
+  seed_record: 50
+  user_taked: 8
+  title_sentence: 1
+  body_sentence: 8
+  des_sentence: 1
 tags:
   maximum_tag_content: 100
 comments:
@@ -19,3 +24,9 @@ ckeditor:
   thumb_height: 100
   content_width: 800
   content_height: 800
+follow:
+  min_following: 2
+  max_following: 50
+  min_followers: 3
+  max_followers: 40
+  per_page: 8
