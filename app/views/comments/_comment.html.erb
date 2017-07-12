@@ -7,8 +7,11 @@
     <p><%= comment.content %></p>
     <ul>
       <li><%= comment.created_at.strftime Settings.posts.timestr %></li>
+      <% if current_user == comment.user %>
+        <%= link_to "Edit", edit_post_comment_path(comment.post, comment), class: "btn btn-info btn-sm edit-comment" %>
+      <% end %>
       <% if current_user == comment.user || current_user.is_admin? %>
-        <li><%= link_to "Delete", [comment.post, comment], remote:true, method: :delete, data: {comfirm: "Are you sure?"} %></li>
+        <%= link_to "Delete", [comment.post, comment], remote:true, method: :delete, data: {comfirm: "Are you sure?"}, class: "btn btn-danger btn-sm" %>
       <% end %>
     </ul>
   </div>

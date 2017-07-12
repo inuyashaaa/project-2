@@ -1,0 +1,17 @@
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title text-center">Edit comment</h4>
+      </div>
+      <div class="modal-body">
+         <%= form_for [comment.post, comment] do |f| %>
+          <%= f.text_area :content, class: "form-control" %>
+          <br>
+          <%= f.submit "Update comment", class: "btn btn-info btn-block", id: "edit-comment" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

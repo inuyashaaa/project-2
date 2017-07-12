@@ -12,6 +12,30 @@ class CommentsController < ApplicationController
     end
   end
 
+  def edit
+    @comment = @post.comments.find_by id: params[:id]
+    render json: {
+      html: render_to_string(partial: "edit_comment", locals: {comment: @comment}),
+      status: :success
+    }
+  end
+
+  def update
+    @comment = @post.comments.find_by id: params[:id]
+    if @comment.update_attributes comment_params
+      render json: {
+        html: render_to_string(@comment),
+        status: :success,
+        id: @comment.id
+      }
+    else
+      render json: {
+        status: :error,
+        message: :"Can not update comment"
+      }
+    end
+  end
+
   def destroy
     @comment = @post.comments.find_by id: params[:id]
     @comment.destroy
