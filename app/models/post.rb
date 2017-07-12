@@ -14,6 +14,8 @@ class Post < ApplicationRecord
   scope :load_feed, ->(following_ids, id) do
     where "user_id IN (?) OR user_id = ?", following_ids, id
   end
+  scope :search, lambda{|search|
+    where("title LIKE ? OR content LIKE ?", "%#{search}%", "%#{search}%")}
 
   mount_uploader :picture, PictureUploader
 

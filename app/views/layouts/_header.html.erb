@@ -33,6 +33,14 @@
       <li><%= link_to t(".contact"), contact_path,
         data: {hover: t(".contact")} %></li>
     </ul>
+    <div class="search-box">
+      <div class="b-search">
+        <%= form_tag searchs_path, method: :get, id: "search-form" do %>
+          <%= text_field_tag 'search', params[:search] %>
+          <%= submit_tag "", id: "search-button" %>
+        <% end %>
+      </div>
+    </div>
     <div class="clearfix"></div>
   </div>
 </div>

@@ -37,7 +37,11 @@
   <div class="list-comment">
     <%= render partial: "comments/comment", collection: @post.comments, as: "comment" %>
   </div>
-  <% if current_user.following? @post.user %>
-    <%= render "comments/comment_form", post: @post %>
+  <% if current_user.present? %>
+    <% if current_user.following? @post.user or current_user.is_admin? or current_user == @post.user %>
+      <%= render "comments/comment_form", post: @post %>
+    <% end %>
+  <% else %>
+    <p>asd</p>
   <% end %>
 </div>

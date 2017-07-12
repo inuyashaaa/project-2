@@ -14,10 +14,8 @@ Rails.application.routes.draw do
   end
   resources :posts do
     resources :comments
-    collection do
-      get :autocomplete
-    end
   end
+
   resources :relationships, only: [:create, :destroy]
   resources :tags, only: :show
 
@@ -26,4 +24,6 @@ Rails.application.routes.draw do
     resources :users, only: [:index, :destroy]
     resources :posts, only: [:index, :destroy]
   end
+
+  resources :searchs, only: :index
 end

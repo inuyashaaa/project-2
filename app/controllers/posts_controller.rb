@@ -56,16 +56,6 @@ class PostsController < ApplicationController
     end
   end
 
-  def autocomplete
-    render json: Post.search(params[:query], {
-      fields: ["title"],
-      match: :word_start,
-      limit: 10,
-      load: false,
-      misspellings: {below: 5}
-    }).map(&:title)
-  end
-
   private
 
   def post_params

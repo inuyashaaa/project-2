@@ -1,0 +1,37 @@
+<div id="myModal" class="modal fade bs-example-modal-lg" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <h2 class="text-center">List Post Search</h2>
+      <div class="modal-body">
+        <% posts.each do |post| %>
+          <div class="row" id="<%= post.id %>">
+            <div class="card">
+              <div class="card-image">
+                <%= image_tag (post.picture? ? post.picture.url : 'default-post.png'), class: "img-responsive" %>
+              </div>
+              <div class="card-content">
+                <p>
+                  <%= link_to post.title, post %>
+                </p>
+                <div class="tags"><strong>Tags:</strong>
+                  <% post.tags.each do |tag| %>
+                    <span><%= link_to tag.name, tag %></span>
+                  <% end %>
+                </div>
+              </div>
+
+              <div class="card-action">
+                "Posted on" <%= post.created_at.strftime Settings.posts.timestr %>
+                "by"<strong> <%= link_to post.user.name, post.user %></strong>
+                <%= link_to post, class: "span-link" do %>
+                  <span class="glyphicon glyphicon-comment"></span>
+                  <strong id="total-comment"><%= post.comments.size %></strong>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
